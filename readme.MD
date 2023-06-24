@@ -10,6 +10,18 @@ pip install -r requirements.txt
 the dependencies are just two:
 - **django** for the backend
 - **pillow** for the image management
+
+now to set the **database**  we enter the django project folder where the manage.py file is located and type in our console:
+``` 
+py manage.py makemigrations
+
+```
+and then:
+``` 
+py manage.py migrate
+
+```
+and now the app is ready to run. 
 ## Local Server
 ---
 to see the project we enter the django project folder where the manage.py file is located and we type in our terminal:

@@ -1,0 +1,23 @@
+{% extends "main.html" %}
+
+{% block content %}
+    {% if request.user.is_authenticated %}
+        <p>welcome back <span>@{{request.user}}</span>,  lets have a productive day!</p>
+        <p>you have {{tasks_number}} task{{ tasks_number|pluralize }} for today: </p>
+        <hr>
+        <p style='text-align: center;'><strong><a href=" {% url 'task_page:task_creation' %} "> create a task</a></strong></p>
+        {% for task in tasks %}
+        <div class='task-feed-container'>
+            <h5><a href=" {% url 'task_page:task_update' task.id %}  "> {{ task.title }} </a></h5>
+            <small> {{task.description}} </small>
+            <p><a href=" {% url 'task_page:task_completion' task.id %} "> mark as completed </a> | 
+                <a href=" {% url 'task_page:task_delete' task.id %} ">delete task</a></p>
+        </div>
+        <br>
+        {% endfor %}
+        
+    {% else %}
+        {% include "task_page/login_user.html" %}
+        
+    {% endif %}
+{% endblock content %}

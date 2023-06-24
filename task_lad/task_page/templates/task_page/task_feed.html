@@ -1,0 +1,28 @@
+
+
+<ul class='task-feed-list'>
+    <h3>Tasks:</h3>
+    {% for task in tasks %}
+    <div class='task-feed-container'>
+        {% if task.completion %}
+            <h3><a href=" {% url 'task_page:task_completed' task.id %}  "> {{ task.title }} </a></h5>
+        
+        {% else %}
+            <h3><a href=" {% url 'task_page:task_update' task.id %}  "> {{ task.title }} </a></h3>
+
+        {% endif %}
+            <p> {{task.description}} </p>  
+            <p>
+            {% if not task.completion %}    
+                <a href=" {% url 'task_page:task_completion' task.id %} ">mark as completed</a> | 
+            {% endif %} 
+                <a href=" {% url 'task_page:task_delete' task.id %} ">delete task</a>        
+            </p>   
+            <!--  the next thing to do is the CRUD for the tasks -->
+        
+        
+    </div>
+    <br>
+    {% endfor %}
+        
+</ul>

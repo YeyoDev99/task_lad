@@ -1,0 +1,173 @@
+
+
+html {
+    background-color: #f9df94 ;
+}
+
+
+.log-user {
+    position: relative;
+    float: right;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+}
+
+
+#title {
+    font-family: 'Titillium Web', sans-serif;    
+    display: inline-block;
+    margin-bottom: 0.1rem;
+    margin-top: 0.005rem;
+    font-size: 3.125rem;
+    height: 3.125rem;
+    
+}
+
+.user-container {
+    text-align: center;
+}
+
+.task-filter {
+    border-right-style: dotted;
+    border-right-width: 0.0625rem ;
+    border-right-color: #54343f;
+}
+
+hr {
+    border-top: 0.0625rem dotted #54343f;
+
+}
+
+p, h3, li, h5, small, h4, h2  {
+    color: #54343f;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.profile-image-big {
+    transition: box-shadow 0.3s ease;
+    height: 4.063rem;
+    width: 4.063rem;
+    border-radius: 50%;
+    margin: 0 auto; 
+}
+
+.task-feed-list {
+    text-align: center;
+
+}
+
+.task-feed-container {
+    transition: box-shadow 0.3s ease;
+    border: 0.1rem;
+    border-style: solid;
+    border-color: #e77a77;
+    text-align: center;
+    margin: 0 auto;
+    width: 45%;
+    background-color: #fff1c1;
+}
+
+
+.task-feed-container:hover {
+    box-shadow: 0.188rem 0.313rem 0.313rem #e77a77;
+}
+
+.profile-image-big:hover {
+    box-shadow: 0.188rem 0.313rem 0.313rem #e77a77;
+}
+
+.task_feed {
+    list-style-type: none;
+    padding-left: 0.2rem;
+}
+
+.contact {
+    margin: 0 auto;
+    text-align: center;
+}
+/*.profile {
+
+
+}*/
+a {
+    transition: hover 0.3s ease;
+    text-decoration: none;
+}
+
+a:link {
+    color: #e77a77;
+}
+
+a:visited {
+    color: #e77a77;
+}
+
+a:hover {
+    color: #a93545;
+}
+
+a:active {
+    color: #54343f;
+}
+
+button {
+    transition: hover 0.3s ease;
+    font-size: 1.125rem;
+    border-color: #e77a77;
+    color: #e77a77;
+    border-width: 0.025rem;
+    border-radius: 0.125rem;
+    font-family: 'PT Sans Narrow', sans-serif;
+    width: 10rem;
+    cursor: pointer;
+    background-color: #fff1c1;
+}
+
+button:hover {
+    color: #fff1c1;
+    background-color: #a93545;
+    border-color: #54343f;
+}
+
+input {
+    border-color: #e77a77;
+    border-width: 0.025rem;
+    border-radius: 0.325rem;
+    font-family: 'PT Sans Narrow', sans-serif;
+
+}
+
+span {
+    color: #e77a77;
+}
+
+textarea {
+    border-color: #e77a77;
+    border-width: 0.025rem;
+    border-radius: 0.325rem;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+label,input{
+    display: block;
+}
+
+.login {
+    width: 15rem;
+    margin: 5rem auto;
+    border: 0.1rem;
+    border-style: solid;
+    border-color: #e77a77;
+    background-color: #fff1c1;
+    text-align: center;
+}
+
+.login-input {
+    width: 10rem;
+    margin: 0 auto;
+
+}
+
+.datetime {
+    color: #e77a77;
+}

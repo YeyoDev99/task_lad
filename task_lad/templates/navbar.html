@@ -1,0 +1,6 @@
+<h1 id="title"><a href=" {% url 'task_page:index' %}">Task Lad</a></h1>
+{% if request.user.is_authenticated %}
+    <p class='log-user'><a  class='profile' href=" {% url 'task_page:user_profile' %} ">your profile</a> | <a href=" {% url 'task_page:logout' %} ">logout</a></p>
+
+{% endif %}
+<hr>

@@ -1,0 +1,16 @@
+{% extends "main.html" %}
+
+{% block content %}
+{% if messages %}
+        {% for message in messages %}
+            <p><strong> {{ message }} </strong></p>
+        {% endfor %}
+    {% endif %}
+<form action="" method='POST' enctype='multipart/form-data'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">update</button>
+    <p><strong><a href=" {{ request.META.HTTP_REFERER }} ">return to the previous page</a></strong></p>
+</form>
+
+{% endblock content %}

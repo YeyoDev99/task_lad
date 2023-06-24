@@ -1,0 +1,40 @@
+{% extends "main.html" %}
+
+{% block content %}
+<style>
+    .profile_c {
+        display: grid;
+        grid-template-columns: 1.5fr 3fr; 
+        column-gap: 1rem;
+    }
+    
+    </style>
+    
+    
+    <div class='profile_c'>
+        <div class='task-filter'>
+            {% include "task_page/task_filter.html" %}
+        
+        </div>
+    
+        <div>
+            <div class='user-container'>
+                <p>{{ request.user.name }} | <small>@{{request.user}}</small></p>
+                <p><a href=" {% url 'task_page:update_user' %} "><img class='profile-image-big' src=" {{request.user.avatar.url}} " alt="user avatar"/></a></p>
+                {% if request.user.bio is not None %}         
+                    <p>{{ request.user.bio }}</p>            
+                {% endif %}
+            </div>
+            
+
+            <hr>
+            {% include "task_page/task_feed.html" %}
+        
+        </div>
+        
+        
+    </div>
+    
+
+
+{% endblock content %}

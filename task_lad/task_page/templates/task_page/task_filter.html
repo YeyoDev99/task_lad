@@ -1,0 +1,10 @@
+<h3>Search by:</h3>
+
+<ul class='task_feed'>
+    {% for filter in filters.keys %}
+    <li><a href=" {% url 'task_page:user_profile' %}?q={{filter}}">{{filter}}</a></li>
+    {% if forloop.counter == 1 or forloop.counter == 5 %}
+        <hr>
+    {% endif %}
+    {% endfor %}
+</ul>

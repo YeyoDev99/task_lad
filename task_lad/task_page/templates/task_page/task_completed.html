@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+    <h2>{{task.title}}</h2>
+    <p>{{task.description}}</p>
+    {% if delay %}
+    <p><strong>delayed</strong></p>
+    {% else %}
+
+    <p><strong>completed in time</strong></p>
+    {% endif %}
+    <p class='datetime'>created at {{task.created}}</p>
+    <p class='datetime'>deadline at {{task.deadline}}</p>
+    <button><a href=" {% url 'task_page:task_update' task.id %}?q='task_restore' ">restore task</a></button>
+    <p><strong><a href=" {{ request.META.HTTP_REFERER }} ">return to the previous page</a></strong></p>
+{% endblock content %}

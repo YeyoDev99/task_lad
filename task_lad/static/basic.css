@@ -35,7 +35,6 @@ p, h3, li, h5, small, h4, h2  {
     height: 4.063rem;
     width: 4.063rem;
     border-radius: 50%;
-    margin: 0 auto; 
 }
 
 .task-feed-list {
@@ -49,8 +48,7 @@ p, h3, li, h5, small, h4, h2  {
     border-style: solid;
     border-color: #e77a77;
     text-align: center;
-    margin: 0 auto;
-    width: 45%;
+    min-width: 45%;
     background-color: #fff1c1;
 }
 
@@ -203,6 +201,7 @@ main {
     margin: 0;
     background-color: #e3dfbc;
     min-height: 20rem;
+    padding: 1rem;
 }
 
 footer {

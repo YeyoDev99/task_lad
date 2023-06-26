@@ -1,9 +1,8 @@
 
-
-<ul class='task-feed-list'>
+<div class='task-feed-list d-flex flex-column justify-content-center align-items-center'>
     <h3>Tasks:</h3>
     {% for task in tasks %}
-    <div class='task-feed-container'>
+    <div class='task-feed-container d-flex flex-column justify-content-center align-items-center'>
         {% if task.completion %}
             <h3><a href=" {% url 'task_page:task_completed' task.id %}  "> {{ task.title }} </a></h5>
         
@@ -25,4 +24,4 @@
     <br>
     {% endfor %}
         
-</ul>
+</div>

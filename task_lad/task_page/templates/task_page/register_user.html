@@ -1,16 +1,19 @@
 {% extends "main.html" %}
 
 {% block content %}
-    {% if messages %}
-        {% for message in messages %}
-            <p><strong> {{ message }} </strong></p>
-        {% endfor %}
-    {% endif %}
-    <form action="" method='POST' enctype='multipart/form-data' >
+    <div class='d-flex flex-column justify-content-center align-items-center'> 
+        {% if messages %}
+            {% for message in messages %}
+                <p><strong> {{ message }} </strong></p>
+            {% endfor %}
+        {% endif %}
+    <form action="d-flex flex-column justify-content-center align-items-center text-center" method='POST' enctype='multipart/form-data' >
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="register">
         <p><strong><a href=" {{ request.META.HTTP_REFERER }} ">return to the previous page</a></strong></p>
     </form>
+
+    </div>
 
 {% endblock content %}

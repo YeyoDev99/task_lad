@@ -168,23 +168,26 @@ def task_delete(request, id):
 @login_required(login_url='task_page:index')
 def user_profile(request):
     user = request.user
-    q = request.GET.get('q') if request.GET.get('q') != None else 'all tasks'
+    q = request.GET.get('q') if request.GET.get('q') != None else 'tasks'
     filters = {
-        'all tasks': user.task_set.all(),
-        'all completed tasks': user.task_set.filter(completion = True),
-        'all uncompleted tasks': user.task_set.filter(completion = False),
-        'all delayed tasks': user.task_set.filter(delay = True),
-        'all in time tasks': user.task_set.filter(delay = False),
+        'tasks': user.task_set.all(),
+        'completed tasks': user.task_set.filter(completion = True),
+        'uncompleted tasks': user.task_set.filter(completion = False),
+        'delayed tasks': user.task_set.filter(delay = True),
+        'in time tasks': user.task_set.filter(delay = False),
         'uncompleted delayed tasks': user.task_set.filter(Q(delay = True) & Q(completion=False)),
         'completed delayed tasks': user.task_set.filter(Q(delay = True) & Q(completion=True)),
         'completed in time tasks': user.task_set.filter(Q(delay = False) & Q(completion=True)),
         'uncompleted in time tasks': user.task_set.filter(Q(delay = False) & Q(completion=False)),    
     }
     tasks = filters[q]
-
+    tasks_count = tasks.count()
     context = {
         'filters': filters,
-        'tasks': tasks       }
+        'tasks': tasks,
+        'tasks_count': tasks_count,
+        'q': q
+                }
     return render(request, 'task_page/user_profile.html', context)    
 
 

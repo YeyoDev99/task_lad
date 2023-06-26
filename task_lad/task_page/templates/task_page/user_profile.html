@@ -11,16 +11,20 @@
             </div>
         
             <div class='user-and-tasks col-12 col-md-6 d-flex flex-column justify-content-center align-content-center'>
-                <div class='user-container'>
-                    <p>{{ request.user.name }} | <small>@{{request.user}}</small></p>
-                    <p><a href=" {% url 'task_page:update_user' %} "><img class='profile-image-big' src=" {{request.user.avatar.url}} " alt="user avatar"/></a></p>
-                    {% if request.user.bio is not None %}         
-                        <p>{{ request.user.bio }}</p>            
-                    {% endif %}
+                <div class="div d-flex flex-column justify-content-center align-content-center">
+                    <div class='user-container'>
+                        <p>{{ request.user.name }} | <small>@{{request.user}}</small></p>
+                        <p><a href=" {% url 'task_page:update_user' %} "><img class='profile-image-big' src=" {{request.user.avatar.url}} " alt="user avatar"/></a></p>
+                        {% if request.user.bio is not None %}         
+                            <p>{{ request.user.bio }}</p>            
+                        {% endif %}
+                    </div>
+                    <hr>
+                    
+        
+                    {% include "task_page/task_feed.html" %}
                 </div>
-                
-    
-                {% include "task_page/task_feed.html" %}
+
             
             </div>
             

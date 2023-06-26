@@ -1,6 +1,7 @@
 
 <div class='task-feed-list d-flex flex-column justify-content-center align-items-center'>
     <h3>Tasks:</h3>
+    <p>you have {{tasks_count}} {{q}} </p>
     {% for task in tasks %}
     <div class='task-feed-container d-flex flex-column justify-content-center align-items-center'>
         {% if task.completion %}

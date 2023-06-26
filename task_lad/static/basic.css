@@ -48,11 +48,16 @@ p, h3, li, h5, small, h4, h2  {
     text-align: center;
     min-width: 45%;
     background-color: #fff1c1;
+    padding: 1rem 1rem;
 }
 
 
 .task-feed-container a {
     text-decoration: none;
+}
+
+.index-feed {
+    min-width: 25%;
 }
 
 form a {
@@ -247,6 +252,36 @@ header {
 .index a {
     text-decoration: none;
 }
+
+.task-creation-form {
+    padding: 1rem 1rem;
+}
+
+.completed-task, .task-creation, .task-update, .user-update  {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    border: 0.1rem;
+    border-style: solid;
+    border-color: #e77a77;
+    background-color: #fff1c1;
+    transition: all 0.2s ease-out;
+    min-width: 40%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.completed-task:hover,  .task-creation:hover , .task-update:hover, .user-update:hover{
+    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #f0b593 ;
+}
+
+.completed-task a{
+    text-decoration: none;
+}
+
+.task_feed, .user-and-tasks .div {
+    padding-top: 4rem;
+}
+
 
 
 @media screen and (max-width: 767px) {

@@ -1,19 +1,20 @@
 {% extends "main.html" %}
 
 {% block content %}
-<div class='task-update d-flex flex-column justify-content-center align-items-center text-center'>
-    {% if messages %}
-    {% for message in messages %}
-        <p><strong> {{ message }} </strong></p>
-    {% endfor %}
-    {% endif %}
-    <form class=' d-flex flex-column justify-content-center align-items-center' action=" {% url 'task_page:task_update' id %} " method='POST'>
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type='submit'>update</button>
-    <p><strong><a href=" {{ request.META.HTTP_REFERER }} ">return to the previous page</a></strong></p>
-    </form>
-
+<div class='d-flex flex-column justify-content-center align-items-center text-center'>
+    <div class="task-update d-flex flex-column justify-content-center align-items-center ">
+        {% if messages %}
+        {% for message in messages %}
+            <p><strong> {{ message }} </strong></p>
+        {% endfor %}
+        {% endif %}
+        <form class=' d-flex flex-column justify-content-center align-items-center' action=" {% url 'task_page:task_update' id %} " method='POST'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type='submit'>update</button>
+        <p><strong><a href=" {{ request.META.HTTP_REFERER }} ">return to the previous page</a></strong></p>
+        </form>
+    </div>
 </div>
 
 

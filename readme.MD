@@ -1,5 +1,5 @@
 # Task Lad
-Welcome to this humble repository, i'll explain the fundamental component of the project and how to manage them, the app consist in a task management app with user management, the backend uses django and the frontend uses the django template language.
+Welcome to this humble repository, i'll explain the fundamental component of the project and how to manage them, the app consist in a task management app with user management, the backend uses django and the frontend uses the django template language and the css framework Bootstrap.
 ## Set Up
 ---
 first we must install the project dependencies that are already stored in requirements.txt, so we just type:

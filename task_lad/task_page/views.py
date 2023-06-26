@@ -15,7 +15,7 @@ from django.utils import timezone
 def index(request):
     if request.user.is_authenticated:
         user = User.objects.get(pk = request.user.id )
-        tasks = user.task_set.filter(Q(deadline__date = datetime.date.today()) & Q(completion = False)).order_by('deadline')
+        tasks = user.task_set.filter(Q(completion = False)).order_by('deadline')[:5]
         tasks_number = tasks.count()
 
         context = {

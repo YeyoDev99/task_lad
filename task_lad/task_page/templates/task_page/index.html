@@ -4,7 +4,7 @@
 <div class='index  d-flex flex-column justify-content-center  align-items-center'>
     {% if request.user.is_authenticated %}
         <p>welcome back <span>@{{request.user}}</span>,  lets have a productive day!</p>
-        <p>you have {{tasks_number}} task{{ tasks_number|pluralize }} for today: </p>
+        <p>you have {{tasks_number}} upcoming task{{ tasks_number|pluralize }} to complete: </p>
         <p style='text-align: center;'><strong><a href=" {% url 'task_page:task_creation' %} "> create a task</a></strong></p>
         {% for task in tasks %}
         <div class='task-feed-container index-feed'>

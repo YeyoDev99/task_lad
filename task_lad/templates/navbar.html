@@ -1,6 +1,20 @@
-<h1 id="title"><a href=" {% url 'task_page:index' %}">Task Lad</a></h1>
-{% if request.user.is_authenticated %}
-    <p class='log-user'><a  class='profile' href=" {% url 'task_page:user_profile' %} ">your profile</a> | <a href=" {% url 'task_page:logout' %} ">logout</a></p>
-
-{% endif %}
-<hr>
+<nav class="navbar navbar-expand-md navbar-light sticky-top">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-toggler">
+        <a class="navbar-brand" href="{% url 'task_page:index' %}"><h1 id="title">Task Lad</h1></a>
+        <ul class="navbar-nav d-flex justify-content-center align-items-center">
+            {% if request.user.is_authenticated %}  
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'task_page:user_profile' %}">your profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=" {% url 'task_page:logout' %} ">logout</a>
+                </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>

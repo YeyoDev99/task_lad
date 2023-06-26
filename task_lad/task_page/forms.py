@@ -1,6 +1,8 @@
 from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 from .models import User, Task
+from django.contrib.admin.widgets import AdminSplitDateTime 
+
 
 
 class UserRegisterForm(UserCreationForm):

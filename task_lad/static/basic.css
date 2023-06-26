@@ -1,25 +1,12 @@
 
-
 html {
-    background-color: #f9df94 ;
+    background-color: #e77a77;
+
 }
-
-
-.log-user {
-    position: relative;
-    float: right;
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
-}
-
 
 #title {
     font-family: 'Titillium Web', sans-serif;    
-    display: inline-block;
-    margin-bottom: 0.1rem;
-    margin-top: 0.005rem;
     font-size: 3.125rem;
-    height: 3.125rem;
     
 }
 
@@ -153,7 +140,6 @@ label,input{
 }
 
 .login {
-    width: 15rem;
     margin: 5rem auto;
     border: 0.1rem;
     border-style: solid;
@@ -170,4 +156,75 @@ label,input{
 
 .datetime {
     color: #e77a77;
+}
+
+.navbar {
+    padding: 2rem;
+}
+
+.navbar-collapse {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dark-section {
+    background-color: #e77a77;
+}
+
+.dark-section i {
+    color: #fff1c1;
+
+}
+
+.footer-icon {
+    font-size: 5rem;
+}
+
+.social-networks-icons i {
+    margin: 0.5rem;
+    font-size: 2rem;
+
+}
+
+
+.social-networks-icons i:hover {
+    color: #54343f;
+
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #fff1c1;
+    margin: 1rem;
+}
+
+
+main {
+    margin: 0;
+    background-color: #e3dfbc;
+    min-height: 20rem;
+}
+
+footer {
+    margin: 0;
+    background-color: #e77a77;
+}
+
+header {
+    background-color: #fff1c1;
+    margin: 0;
+}
+
+.task-feed-container p, .task-feed-container {
+    margin-bottom: 0;
+}
+
+.index {
+    min-height: 20rem;
+}
+
+@media screen and (max-width: 767px) {
+    .navbar-brand {
+        display: none;
+    }
 }

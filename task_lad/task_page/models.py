@@ -5,7 +5,6 @@ from django.contrib import admin
 from django.utils import timezone
 
 
-
 class User(AbstractUser):
     name = models.CharField(max_length=200, null=True, blank=True)
     avatar = models.ImageField(default='default.jpg', null=True, blank=True)

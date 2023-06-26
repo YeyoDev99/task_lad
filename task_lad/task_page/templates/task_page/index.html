@@ -13,6 +13,7 @@
             <p><a href=" {% url 'task_page:task_completion' task.id %} "> mark as completed </a> | 
                 <a href=" {% url 'task_page:task_delete' task.id %} ">delete task</a></p>
         </div>
+        <br>
         {% endfor %}
         
     {% else %}

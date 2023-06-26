@@ -1,6 +1,6 @@
 
     
-    <form class='login' action="{% url 'task_page:login' %}" method='POST'>
+    <form  class='login d-flex flex-column justify-content-center align-items-center' action="{% url 'task_page:login' %}" method='POST'>
         {% if messages %}
         {% for message in messages %}
             <p><strong> {{ message }} </strong></p>

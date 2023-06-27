@@ -8,9 +8,15 @@
     {% endif %}
         {% csrf_token %}
         <br>
-        <input class='login-input form-control' type="text" placeholder="username" name="username" >
+        <div class="input-group ">
+            <span class="input-group-text" id="basic-addon1"><i class="login-icon bi bi-person"></i></span>
+            <input aria-describedby="basic-addon1" class='login-input form-control' type="text" placeholder="username" name="username" >    
+        </div>
         <br>
-        <input class='login-input form-control' type="password" placeholder="password" name='password'>
+        <div class="input-group">
+            <span class="input-group-text" id="basic-addon1"><i class="login-icon bi bi-key"></i></i></span>
+            <input aria-describedby="basic-addon1" class='login-input form-control' type="password" placeholder="password" name='password'>    
+        </div>
         <br>
         <button type='submit'>login</button>
         <p style='text-align: center;'>haven't signed up yet? <a href=" {% url 'task_page:register' %} "><br><strong>click here</strong></a></p>

@@ -299,6 +299,12 @@ header {
     display: none;
 }
 
+form .form-control:focus {
+    border-color: #54343f;
+    box-shadow: 0 0 0 0.2rem #e77a77;
+}
+
+
 
 @media screen and (max-width: 767px) {
     .navbar-brand {

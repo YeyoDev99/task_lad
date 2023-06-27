@@ -8,9 +8,9 @@
     {% endif %}
         {% csrf_token %}
         <br>
-        <input class='login-input' type="text" placeholder="username" name="username" >
+        <input class='login-input form-control' type="text" placeholder="username" name="username" >
         <br>
-        <input class='login-input' type="password" placeholder="password" name='password'>
+        <input class='login-input form-control' type="password" placeholder="password" name='password'>
         <br>
         <button type='submit'>login</button>
         <p style='text-align: center;'>haven't signed up yet? <a href=" {% url 'task_page:register' %} "><br><strong>click here</strong></a></p>
